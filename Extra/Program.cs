@@ -49,4 +49,30 @@ void Age()
     }
     else Console.WriteLine("Age: " + resYear);     
 }
-Age();
+//Age();
+
+void Deposit()
+{
+    Console.WriteLine("Enter number of monthes: ");
+    int month = Convert.ToInt32(Console.ReadLine());
+    double summ = 1000;
+    double proc = 1.5;
+    int count = 0;
+    
+    while (count < month)
+    {
+        summ = summ + (summ * (proc / 100));
+        count += 1;
+        Console.WriteLine(summ);
+    }
+} 
+    
+//Deposit();
+
+void MaxMin()
+{
+    Console.WriteLine("Enter number: ");
+    int number = Convert.ToInt32(Console.ReadLine());
+    
+
+}
