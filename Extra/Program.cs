@@ -72,7 +72,16 @@ void Deposit()
 void MaxMin()
 {
     Console.WriteLine("Enter number: ");
-    int number = Convert.ToInt32(Console.ReadLine());
+    string number = Console.ReadLine();
+    int maxIndex = 0;
+    int minIndex = 0;
+    for (int counter = 0; counter < number.Length; counter++)
+    {
+        if(number[counter] > number[maxIndex]) maxIndex = counter;
     
-
+        if(number[counter] < number[minIndex]) minIndex = counter;
+    }
+    if (maxIndex < minIndex) Console.WriteLine("Максимум левее");
+    else Console.WriteLine("Минимум левее");
 }
+//MaxMin();
